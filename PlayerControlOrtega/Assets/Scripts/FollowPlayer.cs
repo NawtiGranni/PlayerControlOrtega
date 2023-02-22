@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayerx : MonoBehaviour
+public class FollowPlayer : MonoBehaviour
 {
-    public GameObject Plane;
-    private Vector3 offset = new Vector3(30, 0, 10);
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +16,6 @@ public class FollowPlayerx : MonoBehaviour
     void LateUpdate()
     {
         // Offsset the camera behinf the player by addding to the players position
-        transform.position = Plane.transform.position + offset;
+        transform.position = player.transform.position + new Vector3(0, 5, -7);
     }
 }
